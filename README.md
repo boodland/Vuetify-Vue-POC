@@ -1,4 +1,4 @@
-# vuetify-vue-poc
+# Vuetify-Vue-POC
 
 > Proof Of Concept of a Vue app using Vuetify CSS framework
 
