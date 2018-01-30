@@ -2,6 +2,10 @@
 
 > Proof Of Concept of a Vue app using Vuetify CSS framework
 
+The intent of this project is just to evaluate the different features/components of both frameworks. Any task related with testing, deploying, UX or any other development practice is out of the scope.
+
+This project was generated with [Vue CLI](https://github.com/vuejs/vue-cli) version 2.9.2. using pwa template.
+
 ## Build Setup
 
 ``` bash
