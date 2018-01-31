@@ -1,6 +1,6 @@
 # Vuetify-Vue-POC
 
-> Proof Of Concept of a Vue app using Vuetify CSS framework
+> Proof Of Concept of a [Vue](https://vuejs.org/) app using [Vuetify](https://next.vuetifyjs.com/en/) CSS framework
 
 The intent of this project is just to evaluate the different features/components of both frameworks. Any task related with testing, deploying, UX or any other development practice is out of the scope.
 
