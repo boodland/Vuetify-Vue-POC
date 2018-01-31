@@ -1,7 +1,14 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
-import { Vuetify, VApp } from 'vuetify';
+import {
+  Vuetify,
+  VApp,
+  VGrid,
+  VToolbar,
+  VBtn,
+  VIcon,
+} from 'vuetify';
 
 import App from './App';
 import router from './router';
@@ -14,6 +21,10 @@ Vue.config.productionTip = false;
 Vue.use(Vuetify, {
   components: {
     VApp,
+    VGrid,
+    VToolbar,
+    VBtn,
+    VIcon,
   },
 });
 
