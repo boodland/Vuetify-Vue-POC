@@ -8,6 +8,9 @@ import {
   VToolbar,
   VBtn,
   VIcon,
+  VNavigationDrawer,
+  VList,
+  VDivider,
 } from 'vuetify';
 
 import App from './App';
@@ -25,6 +28,9 @@ Vue.use(Vuetify, {
     VToolbar,
     VBtn,
     VIcon,
+    VNavigationDrawer,
+    VList,
+    VDivider,
   },
 });
 
