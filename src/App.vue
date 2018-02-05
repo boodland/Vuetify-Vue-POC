@@ -1,22 +1,29 @@
 <template>
   <div id="app">
     <v-app>
-      <navbar-header></navbar-header>
-      <main>
-        <img src="./assets/logo.png" alt="Vue.js PWA">
-        <router-view></router-view>
-      </main>
+      <navbar-list app></navbar-list>
+      <navbar-header app></navbar-header>
+      <v-content>
+        <v-container>
+          <main>
+            <img src="./assets/logo.png" alt="Vue.js PWA">
+            <router-view></router-view>
+          </main>
+        </v-container>
+      </v-content>
     </v-app>
   </div>
 </template>
 
 <script>
 import NavbarHeader from './components/navigation/NavbarHeader';
+import NavbarList from './components/navigation/NavbarList';
 
 export default {
   name: 'app',
   components: {
     'navbar-header': NavbarHeader,
+    'navbar-list': NavbarList,
   },
 };
 </script>
@@ -24,13 +31,6 @@ export default {
 <style>
 body {
   margin: 0;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
 }
 
 main {
