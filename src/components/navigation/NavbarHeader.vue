@@ -3,7 +3,7 @@
     <v-layout justify-space-between="true" align-center="true">
     <v-toolbar-side-icon></v-toolbar-side-icon>
     <v-toolbar-title class="white--text mx-0">{{title}}</v-toolbar-title>
-    <v-btn icon>
+    <v-btn icon id="dashboard-action">
       <v-icon>apps</v-icon>
     </v-btn>
     </v-layout>
@@ -20,3 +20,9 @@
     },
   };
 </script>
+
+<style>
+  #dashboard-action{
+    visibility: hidden;
+  }
+</style>
