@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar dark color="primary">
+  <v-toolbar fixed dark color="primary">
     <v-layout justify-space-between="true" align-center="true">
     <v-toolbar-side-icon></v-toolbar-side-icon>
     <v-toolbar-title class="white--text mx-0">{{title}}</v-toolbar-title>
