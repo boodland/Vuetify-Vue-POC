@@ -21,7 +21,7 @@
   };
 </script>
 
-<style>
+<style scoped>
   #dashboard-action{
     visibility: hidden;
   }
