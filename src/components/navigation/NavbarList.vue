@@ -20,6 +20,7 @@
 
 <script>
   export default {
+    name: 'navbar-list',
     data() {
       return {
         drawer: true,
