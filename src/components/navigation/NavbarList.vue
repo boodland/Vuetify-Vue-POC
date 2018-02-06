@@ -6,7 +6,7 @@
     width="200"
   >
     <v-list dense class="mt-2">
-      <v-list-tile v-for="item in items" :key="item.title" @click="showDrawer = !showDrawer">
+      <v-list-tile v-for="item in items" :key="item.title" @click="showDrawer = false">
         <v-list-tile-action>
           <v-icon>{{ item.icon }}</v-icon>
         </v-list-tile-action>
@@ -21,10 +21,10 @@
 <script>
   export default {
     name: 'navbar-list',
-    props: ['displayList'],
+    props: ['value'],
     data() {
       return {
-        showDrawer: this.displayList,
+        showDrawer: this.value,
         items: [
           { title: 'Dashboard', icon: 'apps' },
           { title: 'Subjects', icon: 'school' },
@@ -34,11 +34,11 @@
       };
     },
     watch: {
-      displayList() {
-        this.showDrawer = this.displayList;
+      value() {
+        this.showDrawer = this.value;
       },
       showDrawer() {
-        this.$emit('update:displayList', this.showDrawer);
+        this.$emit('input', this.showDrawer);
       },
     },
   };

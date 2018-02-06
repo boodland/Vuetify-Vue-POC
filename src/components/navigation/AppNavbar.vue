@@ -1,6 +1,6 @@
 <template>
   <div>
-    <navbar-list app :displayList.sync="isListDisplayed"></navbar-list>
+    <navbar-list app v-model="isListDisplayed"></navbar-list>
     <navbar-header app @menuIconClicked="displayListHandler"></navbar-header>
   </div>
 </template>
