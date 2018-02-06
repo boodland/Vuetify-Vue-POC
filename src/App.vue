@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <v-app>
-      <navbar-list app></navbar-list>
-      <navbar-header app></navbar-header>
+      <app-navbar></app-navbar>
       <v-content>
         <v-container>
           <main>
@@ -16,25 +15,23 @@
 </template>
 
 <script>
-import NavbarHeader from './components/navigation/NavbarHeader';
-import NavbarList from './components/navigation/NavbarList';
+  import AppNavbar from './components/navigation/AppNavbar';
 
-export default {
-  name: 'app',
-  components: {
-    'navbar-header': NavbarHeader,
-    'navbar-list': NavbarList,
-  },
-};
+  export default {
+    name: 'app',
+    components: {
+      AppNavbar,
+    },
+  };
 </script>
 
 <style>
-body {
-  margin: 0;
-}
+  body {
+    margin: 0;
+  }
 
-main {
-  text-align: center;
-  margin-top: 40px;
-}
+  main {
+    text-align: center;
+    margin-top: 40px;
+  }
 </style>
