@@ -1,7 +1,7 @@
 <template>
   <v-toolbar fixed dark color="primary">
     <v-layout justify-space-between="true" align-center="true">
-    <v-toolbar-side-icon></v-toolbar-side-icon>
+    <v-toolbar-side-icon @click="menuIconHandler"></v-toolbar-side-icon>
     <v-toolbar-title class="white--text mx-0">{{title}}</v-toolbar-title>
     <v-btn icon id="dashboard-action">
       <v-icon>apps</v-icon>
@@ -17,6 +17,11 @@
       return {
         title: 'Subject Hub',
       };
+    },
+    methods: {
+      menuIconHandler() {
+        this.$emit('menuIconClicked');
+      },
     },
   };
 </script>
