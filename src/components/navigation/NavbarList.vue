@@ -4,9 +4,10 @@
     v-model="showDrawer"
     absolute
     width="200"
+    @click.native="hideDrawerHandler"
   >
     <v-list dense class="mt-2">
-      <v-list-tile v-for="item in items" :key="item.title" @click="showDrawer = false">
+      <v-list-tile v-for="item in items" :key="item.title" @click="hideDrawerHandler">
         <v-list-tile-action>
           <v-icon>{{ item.icon }}</v-icon>
         </v-list-tile-action>
@@ -32,6 +33,11 @@
           { title: 'Exams', icon: 'edit' },
         ],
       };
+    },
+    methods: {
+      hideDrawerHandler() {
+        this.showDrawer = false;
+      },
     },
     watch: {
       value() {
