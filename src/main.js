@@ -11,6 +11,7 @@ import {
   VNavigationDrawer,
   VList,
   VDivider,
+  VCard,
 } from 'vuetify';
 
 import App from './App';
@@ -31,6 +32,7 @@ Vue.use(Vuetify, {
     VNavigationDrawer,
     VList,
     VDivider,
+    VCard,
   },
 });
 
