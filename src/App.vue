@@ -1,16 +1,12 @@
 <template>
-  <div id="app">
-    <v-app>
-      <app-navbar></app-navbar>
-      <v-content>
-        <v-container fluid>
-          <main>
-            <router-view></router-view>
-          </main>
-        </v-container>
-      </v-content>
-    </v-app>
-  </div>
+  <v-app id="app">
+    <app-navbar></app-navbar>
+    <v-content>
+      <v-container class="px-0 py-0" fluid>
+        <router-view></router-view>
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
@@ -23,9 +19,3 @@
     },
   };
 </script>
-
-<style>
-  body {
-    margin: 0;
-  }
-</style>
