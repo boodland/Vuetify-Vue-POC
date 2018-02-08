@@ -3,7 +3,7 @@
     <v-app>
       <app-navbar></app-navbar>
       <v-content>
-        <v-container>
+        <v-container fluid>
           <main>
             <router-view></router-view>
           </main>
@@ -27,9 +27,5 @@
 <style>
   body {
     margin: 0;
-  }
-
-  main {
-    margin-top: 40px;
   }
 </style>
