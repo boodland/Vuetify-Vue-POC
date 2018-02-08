@@ -1,7 +1,7 @@
 <template>
   <div>
-    <navbar-list app v-model="isListDisplayed"></navbar-list>
-    <navbar-header app @menuIconClicked="displayListHandler"></navbar-header>
+    <navbar-list v-model="isListDisplayed"></navbar-list>
+    <navbar-header @menuIconClicked="displayListHandler"></navbar-header>
   </div>
 </template>
 

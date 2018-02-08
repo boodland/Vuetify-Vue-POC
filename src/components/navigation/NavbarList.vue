@@ -2,7 +2,7 @@
   <v-navigation-drawer
     temporary
     v-model="showDrawer"
-    absolute
+    app
     width="200"
     @click.native="hideDrawerHandler"
   >
