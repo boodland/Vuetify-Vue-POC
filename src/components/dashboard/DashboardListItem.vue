@@ -18,7 +18,7 @@
       </v-layout>
     </v-card-media>
     <v-card-actions>
-      <v-layout class="card-actions">
+      <v-layout class="card-actions" justify-space-around>
         <v-chip color="primary" text-color="white">{{numOfExams}} Exams</v-chip>
         <v-chip color="pink accent-2" text-color="white">{{numOfTutors}} Tutors</v-chip>
       </v-layout>
