@@ -1,11 +1,28 @@
 <template>
-<v-container grid-list-md v-once>
-  <v-layout row wrap>
-    <v-flex xs6 v-for="subjectItem in subjectList" :key="subjectItem.subjectId">
-      {{subjectItem.subjectId}}
-    </v-flex>
-  </v-layout>
-</v-container>
+  <v-list two-line>
+    <v-layout row wrap>
+      <v-flex xs12 md6 v-for="subjectItem in subjectList" :key="subjectItem.subjectId">
+        <v-list-tile class="my-2">
+          <img class="subject-avatar" :src="'/static/img/' + subjectItem.image + '.jpg'">
+          <v-list-tile-content class="pl-3">
+            <v-list-tile-title class="subject-title">{{ subjectItem.title }}</v-list-tile-title>
+            <v-list-tile-sub-title>
+              <v-icon size="18px" class="black--text">event</v-icon>
+              <span class="black--text subject-assessment-date">{{ subjectItem.assessmentDate.toDateString() }}</span>
+            </v-list-tile-sub-title>
+          </v-list-tile-content>
+          <div class="subject-seats">
+            <span class="subject-seats-number">{{subjectItem.numOfSeats}}</span>
+            <span>SEATS</span>
+          </div>
+          <div class="subject-type" v-bind:style="{background: subjectItem.color}">
+            <span class="subject-type-name">{{subjectItem.type}}</span>
+            <span>TYPE</span>
+          </div>
+        </v-list-tile>
+      </v-flex>
+    </v-layout>
+  </v-list>
 </template>
 
 
@@ -94,3 +111,46 @@
     },
   };
 </script>
+
+<style scoped>
+  .subject-avatar {
+    height: 80%;
+    width: auto;
+  }
+
+  .subject-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .subject-assessment-date {
+    vertical-align: middle;
+    font-size: 16px;
+  }
+
+  .subject-type {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    width: 58px;
+    height: 100%;
+  }
+
+  .subject-type-name {
+    font-size: 30px;
+  }
+
+  .subject-seats {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: grey;
+    width: 58px;
+    margin: 0 5px;
+    height: 100%;
+  }
+
+  .subject-seats-number {
+    font-size: 30px;
+  }
+</style>
+
