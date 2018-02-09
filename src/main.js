@@ -12,6 +12,7 @@ import {
   VList,
   VDivider,
   VCard,
+  VChip,
 } from 'vuetify';
 
 import App from './App';
@@ -33,6 +34,7 @@ Vue.use(Vuetify, {
     VList,
     VDivider,
     VCard,
+    VChip,
   },
 });
 
