@@ -12,5 +12,6 @@ export default new Router({
       name: 'DashboardList',
       component: DashboardList,
     },
+    { path: '*', redirect: '/' },
   ],
 });
