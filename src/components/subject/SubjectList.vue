@@ -104,10 +104,28 @@
 
   export default {
     name: 'subject-list',
+    props: ['filterTerms'],
     data() {
       return {
         subjectList: subjectItems,
       };
+    },
+    methods: {
+      filterSubjectBy(subject, title, typeValue) {
+        let isValid = !title || subject.title.toLowerCase().includes(title.toLowerCase());
+
+        isValid = isValid &&
+        (!typeValue || subject.type === typeValue);
+
+        return isValid;
+      },
+    },
+    watch: {
+      filterTerms() {
+        this.subjectList = subjectItems.filter(
+          subject => this.filterSubjectBy(subject, this.filterTerms.title, this.filterTerms.type),
+        );
+      },
     },
   };
 </script>

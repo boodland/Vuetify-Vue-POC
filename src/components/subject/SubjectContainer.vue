@@ -1,7 +1,7 @@
 <template>
   <div>
-    <subject-search></subject-search>
-    <subject-list></subject-list>
+    <subject-search v-model="searchTerms"></subject-search>
+    <subject-list :filter-terms="searchTerms"></subject-list>
   </div>
 </template>
 
@@ -11,6 +11,11 @@
 
   export default {
     name: 'subject-container',
+    data() {
+      return {
+        searchTerms: null,
+      };
+    },
     components: {
       SubjectSearch,
       SubjectList,
