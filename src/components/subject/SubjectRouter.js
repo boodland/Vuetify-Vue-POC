@@ -1,4 +1,4 @@
-import SubjectList from '@/components/subject/SubjectList';
+const SubjectList = () => import('./SubjectList');
 
 export default {
   path: '/subjects',
