@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import DashboardList from '@/components/dashboard/DashboardList';
-import SubjectList from '@/components/subject/SubjectList';
+import SubjectRoutes from '@/components/subject/SubjectRouter';
 
 Vue.use(Router);
 
@@ -13,11 +13,7 @@ export default new Router({
       name: 'DashboardList',
       component: DashboardList,
     },
-    {
-      path: '/subjects',
-      name: 'SubjectList',
-      component: SubjectList,
-    },
+    SubjectRoutes,
     { path: '*', redirect: '/dashboard' },
   ],
 });
