@@ -1,8 +1,8 @@
 <template>
   <v-list two-line>
     <v-layout row wrap>
-      <v-flex xs12 md6 v-for="subjectItem in subjectList" :key="subjectItem.subjectId">
-        <v-list-tile class="my-2">
+      <v-flex class="py-1" xs12 md6 v-for="subjectItem in subjectList" :key="subjectItem.subjectId">
+        <v-list-tile>
           <img class="subject-avatar" :src="'/static/img/' + subjectItem.image + '.jpg'">
           <v-list-tile-content class="pl-3">
             <v-list-tile-title class="subject-title">{{ subjectItem.title }}</v-list-tile-title>
