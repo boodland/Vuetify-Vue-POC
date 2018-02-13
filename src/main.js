@@ -13,6 +13,8 @@ import {
   VDivider,
   VCard,
   VChip,
+  VTextField,
+  VSelect,
 } from 'vuetify';
 
 import App from './App';
@@ -35,6 +37,8 @@ Vue.use(Vuetify, {
     VDivider,
     VCard,
     VChip,
+    VTextField,
+    VSelect,
   },
 });
 
