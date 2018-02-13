@@ -1,7 +1,7 @@
-const SubjectList = () => import('./SubjectList');
+const SubjectContainer = () => import('./SubjectContainer');
 
 export default {
   path: '/subjects',
   name: 'SubjectList',
-  component: SubjectList,
+  component: SubjectContainer,
 };
