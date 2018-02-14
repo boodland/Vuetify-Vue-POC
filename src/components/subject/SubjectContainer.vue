@@ -13,7 +13,7 @@
     name: 'subject-container',
     data() {
       return {
-        searchTerms: null,
+        searchTerms: {},
       };
     },
     components: {
