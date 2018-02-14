@@ -5,7 +5,7 @@
         <v-list-tile>
           <img class="subject-avatar" :src="'/static/img/' + subjectItem.image + '.jpg'">
           <v-list-tile-content class="pl-3">
-            <v-list-tile-title class="subject-title">{{ subjectItem.title }}</v-list-tile-title>
+            <v-list-tile-title v-highlight-term="filterTerms.title" class="subject-title">{{ subjectItem.title }}</v-list-tile-title>
             <v-list-tile-sub-title>
               <v-icon size="18px" class="black--text">event</v-icon>
               <span class="black--text subject-assessment-date">{{ subjectItem.assessmentDate.toDateString() }}</span>
