@@ -3,6 +3,7 @@
 import Vue from 'vue';
 
 import AppUIFramework from './AppUIFramework';
+import AppDirectives from './AppDirectives';
 
 import App from './App';
 import router from './router';
@@ -10,6 +11,7 @@ import router from './router';
 Vue.config.productionTip = false;
 
 AppUIFramework.setVueConfiguration();
+AppDirectives.setVueConfiguration();
 
 /* eslint-disable no-new */
 new Vue({
