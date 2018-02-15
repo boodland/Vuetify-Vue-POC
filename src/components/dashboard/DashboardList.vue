@@ -1,9 +1,13 @@
 <template>
 <v-container grid-list-md v-once>
-  <v-layout row wrap>
-    <v-flex xs6 v-for="dashboardItem in dashboardList" :key="dashboardItem.subjectId">
-      <dashboard-list-item v-bind="dashboardItem"></dashboard-list-item>
-    </v-flex>
+  <v-layout row wrap justify-space-around>
+      <dashboard-list-item
+        class="my-2"
+        v-for="dashboardItem in dashboardList"
+        :key="dashboardItem.subjectId"
+        v-bind="dashboardItem"
+      >
+      </dashboard-list-item>
   </v-layout>
 </v-container>
 </template>
