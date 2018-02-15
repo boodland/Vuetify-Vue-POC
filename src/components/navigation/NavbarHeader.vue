@@ -1,6 +1,6 @@
 <template>
   <v-toolbar app dark color="primary">
-    <v-layout justify-space-between="true" align-center="true">
+    <v-layout class="app-layout" justify-space-between="true" align-center="true">
       <v-toolbar-side-icon @click="menuIconHandler"></v-toolbar-side-icon>
       <v-toolbar-title class="white--text mx-0">{{title}}</v-toolbar-title>
       <v-btn icon id="dashboard-action">
