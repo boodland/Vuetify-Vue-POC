@@ -1,5 +1,5 @@
 <template>
-  <v-list two-line>
+  <v-list two-line class="grey lighten-5">
     <v-layout row wrap>
       <v-flex class="py-1" xs12 md6 v-for="subjectItem in subjectList" :key="subjectItem.subjectId">
         <v-list-tile>
