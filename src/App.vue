@@ -1,8 +1,8 @@
 <template>
   <v-app id="app">
     <app-navbar></app-navbar>
-    <v-content class="app-layout">
-      <v-container class="px-0 py-0" fluid>
+    <v-content>
+      <v-container class="app-layout px-0 py-0">
         <router-view></router-view>
       </v-container>
     </v-content>
@@ -22,8 +22,13 @@
 
 <style>
   .app-layout {
-    margin: 0 auto;
     max-width: 900px;
+  }
+
+  @media (min-width: 900px){
+    .app-layout {
+      margin: 0 auto;
+    }
   }
 </style>
 
