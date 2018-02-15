@@ -1,6 +1,6 @@
 <template>
   <v-list two-line class="grey lighten-5">
-    <v-layout row wrap>
+    <v-layout row wrap justify-space-around>
       <v-flex class="py-1" xs12 md6 v-for="subjectItem in subjectList" :key="subjectItem.subjectId">
         <v-list-tile>
           <img class="subject-avatar" :src="'/static/img/' + subjectItem.image + '.jpg'">
