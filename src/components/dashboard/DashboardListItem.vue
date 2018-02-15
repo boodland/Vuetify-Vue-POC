@@ -1,6 +1,6 @@
 <template>
-  <v-card>
-    <v-card-title class="pt-1 pb-3">
+  <v-card class="subject-card">
+    <v-card-title class="pt-1 pb-3 px-2">
       <div>
         <h2>{{title.toUpperCase()}}</h2>
         <v-icon small>event</v-icon>
@@ -17,11 +17,9 @@
         <v-btn class="mb-2">View Subject</v-btn>
       </v-layout>
     </v-card-media>
-    <v-card-actions>
-      <v-layout class="card-actions" justify-space-around>
-        <v-chip color="primary" text-color="white">{{numOfExams}} Exams</v-chip>
-        <v-chip color="pink accent-2" text-color="white">{{numOfTutors}} Tutors</v-chip>
-      </v-layout>
+    <v-card-actions class="card-actions">
+      <v-chip color="primary" text-color="white">{{numOfExams}} Exams</v-chip>
+      <v-chip color="pink accent-2" text-color="white">{{numOfTutors}} Tutors</v-chip>
     </v-card-actions>
   </v-card>
 </template>
@@ -51,6 +49,20 @@
 
   .card-actions {
     font-weight: bold;
+    justify-content: space-around;
   }
+
+  .subject-card {
+    max-width: 190px;
+    min-width: 175px;
+  }
+
+  @media (max-width: 411px){
+  .subject-card {
+    max-width: 250px;
+    min-width: 175px;
+  }
+
+}
 
 </style>
