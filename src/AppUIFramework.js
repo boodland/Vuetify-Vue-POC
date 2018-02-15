@@ -14,6 +14,7 @@ import {
   VChip,
   VTextField,
   VSelect,
+  VExpansionPanel,
 } from 'vuetify';
 
 require('vuetify/src/stylus/app.styl');
@@ -34,6 +35,7 @@ class AppUIFramework {
         VChip,
         VTextField,
         VSelect,
+        VExpansionPanel,
       },
     });
   }
