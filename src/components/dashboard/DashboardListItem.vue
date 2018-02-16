@@ -4,7 +4,7 @@
       <div>
         <h2>{{title.toUpperCase()}}</h2>
         <v-icon small>event</v-icon>
-        <span class="card-subtitle">{{assessmentDate.toDateString()}}</span>
+        <span class="card-subtitle app-grey-text subheading">{{assessmentDate.toDateString()}}</span>
       </div>
     </v-card-title>
 
@@ -35,8 +35,6 @@
 <style scoped>
 
   .card-subtitle {
-    color: rgba(0,0,0,.54);
-    font-size: 16px;
     vertical-align: middle;
   }
 
