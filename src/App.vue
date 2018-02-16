@@ -25,6 +25,10 @@
     max-width: 900px;
   }
 
+  .app-grey-text {
+    color: rgba(0,0,0,.54);
+  }
+
   @media (min-width: 900px){
     .app-layout {
       margin: 0 auto;
