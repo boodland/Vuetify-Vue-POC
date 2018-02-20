@@ -13,7 +13,7 @@ export default new Router({
       name: 'DashboardList',
       component: DashboardList,
     },
-    SubjectRoutes,
+    ...SubjectRoutes,
     { path: '*', redirect: '/dashboard' },
   ],
 });
