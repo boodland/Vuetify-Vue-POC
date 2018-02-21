@@ -10,8 +10,9 @@ export default [
     component: SubjectContainer,
   },
   {
-    path: `${routerRootPath}/:id`,
+    path: `${routerRootPath}/:subjectId`,
     name: 'SubjectDetails',
     component: SubjectDetails,
+    props: route => ({ subjectId: parseInt(route.params.subjectId, 10) }),
   },
 ];
