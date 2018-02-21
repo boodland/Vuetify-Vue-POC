@@ -14,7 +14,7 @@
     >
       <v-layout class="text-xs-center" row wrap justify-center align-center>
         <div class="card-seats mt-3 mx-2">{{numOfSeats}} SEATS</div>
-        <v-btn class="mb-2">View Subject</v-btn>
+        <v-btn class="mb-2" :to="'/subjects/' + subjectId">View Subject</v-btn>
       </v-layout>
     </v-card-media>
     <v-card-actions class="card-actions px-0">
