@@ -13,10 +13,20 @@ Vue.config.productionTip = false;
 AppUIFramework.setVueConfiguration();
 AppDirectives.setVueConfiguration();
 
+router.beforeEach((to, from, next) => {
+  router.app.loading = true;
+  next();
+});
+
+router.afterEach(() => {
+  router.app.loading = false;
+});
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   template: '<App/>',
   components: { App },
+  data: { loading: false },
 });
