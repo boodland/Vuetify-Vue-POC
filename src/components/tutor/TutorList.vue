@@ -39,8 +39,9 @@
         TutorList: [],
       };
     },
-    created() {
-      TutorService.getTutorsAsync().then(tutors => this.setTutorList(tutors));
+    beforeRouteEnter(to, from, next) {
+      TutorService.getTutorsAsync()
+        .then(tutors => next(vm => vm.setTutorList(tutors)));
     },
     methods: {
       getRatingStars(rating) {
