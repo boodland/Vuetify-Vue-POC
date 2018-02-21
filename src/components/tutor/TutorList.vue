@@ -29,7 +29,6 @@
   </v-list>
 </template>
 
-
 <script>
   import TutorService from './TutorService';
 
