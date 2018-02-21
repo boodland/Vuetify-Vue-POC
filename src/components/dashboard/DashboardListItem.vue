@@ -17,7 +17,7 @@
         <v-btn class="mb-2">View Subject</v-btn>
       </v-layout>
     </v-card-media>
-    <v-card-actions class="card-actions">
+    <v-card-actions class="card-actions px-0">
       <v-chip color="primary" text-color="white">{{numOfExams}} Exams</v-chip>
       <v-chip color="pink accent-2" text-color="white">{{numOfTutors}} Tutors</v-chip>
     </v-card-actions>
@@ -51,7 +51,7 @@
   }
 
   .subject-card {
-    max-width: 190px;
+    max-width: 196px;
     min-width: 175px;
   }
 
