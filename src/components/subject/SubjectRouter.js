@@ -1,5 +1,5 @@
-const SubjectContainer = () => import('./SubjectContainer');
-const SubjectDetails = () => import('./SubjectDetails');
+const SubjectContainer = () => import(/* webpackChunkName: "subject-chunk" */ './SubjectContainer');
+const SubjectDetails = () => import(/* webpackChunkName: "subject-chunk" */ './SubjectDetails');
 
 const routerRootPath = '/subjects';
 
