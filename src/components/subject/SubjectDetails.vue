@@ -87,21 +87,16 @@
 </template>
 
 <script>
+  import SubjectService from './SubjectService';
+
   export default {
     name: 'subject-details',
     data() {
       return {
-        subjectItem: {
-          subjectId: 1,
-          title: 'History',
-          assessmentDate: new Date(2018, 4),
-          numOfSeats: 680,
-          type: 'A',
-          color: 'red',
-          image: 'history',
-        },
+        subjectItem: SubjectService.getSubject(this.subjectId),
       };
     },
+    props: { subjectId: Number },
   };
 </script>
 
