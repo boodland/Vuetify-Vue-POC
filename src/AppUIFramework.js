@@ -15,6 +15,7 @@ import {
   VTextField,
   VSelect,
   VExpansionPanel,
+  VProgressLinear,
 } from 'vuetify';
 
 require('vuetify/src/stylus/app.styl');
@@ -36,6 +37,7 @@ class AppUIFramework {
         VTextField,
         VSelect,
         VExpansionPanel,
+        VProgressLinear,
       },
     });
   }
