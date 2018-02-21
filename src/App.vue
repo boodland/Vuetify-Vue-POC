@@ -2,6 +2,7 @@
   <v-app id="app">
     <app-navbar></app-navbar>
     <v-content>
+      <app-loader v-show="$root.loading"></app-loader>
       <v-container class="app-layout px-0 py-0">
         <router-view></router-view>
       </v-container>
@@ -11,11 +12,13 @@
 
 <script>
   import AppNavbar from './components/navigation/AppNavbar';
+  import AppLoader from './AppLoader';
 
   export default {
     name: 'app',
     components: {
       AppNavbar,
+      AppLoader,
     },
   };
 </script>
