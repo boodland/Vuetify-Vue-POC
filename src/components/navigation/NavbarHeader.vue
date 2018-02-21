@@ -1,9 +1,18 @@
 <template>
   <v-toolbar app dark color="primary">
     <v-layout class="app-layout" justify-space-between="true" align-center="true">
-      <v-toolbar-side-icon @click="menuIconHandler"></v-toolbar-side-icon>
+      <v-toolbar-side-icon
+        v-if="isHomePage()"
+        @click="menuIconHandler">
+      </v-toolbar-side-icon>
+      <v-btn v-else icon @click="goBack">
+        <v-icon>arrow_back</v-icon>
+      </v-btn>
       <v-toolbar-title class="white--text mx-0">{{title}}</v-toolbar-title>
-      <v-btn icon id="dashboard-action">
+      <v-btn v-if="isHomePage()" icon id="dashboard-action">
+        <v-icon>apps</v-icon>
+      </v-btn>
+      <v-btn v-else icon :to="'/dashboard'">
         <v-icon>apps</v-icon>
       </v-btn>
     </v-layout>
@@ -21,6 +30,12 @@
     methods: {
       menuIconHandler() {
         this.$emit('menuIconClicked');
+      },
+      goBack() {
+        this.$router.go(-1);
+      },
+      isHomePage() {
+        return this.$route.name === 'DashboardList';
       },
     },
   };
