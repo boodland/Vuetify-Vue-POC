@@ -6,21 +6,14 @@ import AppUIFramework from './AppUIFramework';
 import AppDirectives from './AppDirectives';
 
 import App from './App';
-import router from './router';
+import AppRouter from './router';
 
 Vue.config.productionTip = false;
 
 AppUIFramework.setVueConfiguration();
 AppDirectives.setVueConfiguration();
 
-router.beforeEach((to, from, next) => {
-  router.app.loading = true;
-  next();
-});
-
-router.afterEach(() => {
-  router.app.loading = false;
-});
+const router = AppRouter.setVueConfiguration();
 
 /* eslint-disable no-new */
 new Vue({
