@@ -21,5 +21,5 @@ new Vue({
   router,
   template: '<App/>',
   components: { App },
-  data: { loading: false },
+  data: { loading: false, dialog: { show: false, message: '' } },
 });
