@@ -15,4 +15,14 @@ export default [
     component: SubjectDetails,
     props: route => ({ subjectId: parseInt(route.params.subjectId, 10) }),
   },
+  {
+    path: `${routerRootPath}/:subjectId/exams`,
+    name: 'SubjectExams',
+    meta: { requiresAuth: true, message: "subject's exams" },
+  },
+  {
+    path: `${routerRootPath}/:subjectId/tutors`,
+    name: 'SubjectTutors',
+    meta: { requiresAuth: true, message: "subject's tutors" },
+  },
 ];
