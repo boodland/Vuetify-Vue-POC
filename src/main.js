@@ -21,5 +21,9 @@ new Vue({
   router,
   template: '<App/>',
   components: { App },
-  data: { loading: false, dialog: { show: false, message: '' } },
+  data: {
+    loading: false,
+    dialog: { show: false, message: '' },
+    transitionName: '',
+  },
 });
