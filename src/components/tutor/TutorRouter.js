@@ -8,4 +8,9 @@ export default [
     name: 'TutorList',
     component: TutorList,
   },
+  {
+    path: `${routerRootPath}/:tutorId`,
+    name: 'TutorDetails',
+    meta: { requiresAuth: true, message: "tutor's details" },
+  },
 ];
