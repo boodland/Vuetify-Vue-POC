@@ -1,8 +1,8 @@
 <template>
   <v-list two-line class="grey lighten-5">
     <v-layout row wrap justify-space-around>
-      <v-flex xs12 md6 v-for="tutorItem in TutorList" :key="tutorItem.tutorId">
-        <v-list-tile avatar>
+      <v-flex xs12 md6 v-for="(tutorItem, index) in TutorList" :key="index">
+        <v-list-tile avatar :to="'/tutors/' + index">
           <v-list-tile-avatar>
             <img :src="tutorItem.thumbnail">
           </v-list-tile-avatar>
@@ -21,7 +21,7 @@
             </v-list-tile-sub-title>
           </v-list-tile-content>
           <v-list-tile-action>
-            <v-btn color="error">Contact</v-btn>
+            <v-btn color="error" @click.prevent.stop="contactTutor">Contact</v-btn>
           </v-list-tile-action>
         </v-list-tile>
       </v-flex>
@@ -51,6 +51,10 @@
       },
       setTutorList(tutors) {
         this.TutorList = tutors;
+      },
+      contactTutor() {
+        this.$root.dialog.message = 'contact the tutor';
+        this.$root.dialog.show = true;
       },
     },
   };
