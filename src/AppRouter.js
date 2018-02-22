@@ -15,6 +15,10 @@ const createRouter = () => {
       },
       ...SubjectRoutes,
       ...TutorRoutes,
+      {
+        path: '/exams',
+        meta: { requiresAuth: true, message: 'exams list' },
+      },
       { path: '*', redirect: '/dashboard' },
     ],
   });
@@ -28,8 +32,14 @@ class AppRouter {
     const router = createRouter();
 
     router.beforeEach((to, from, next) => {
-      router.app.loading = true;
-      next();
+      if (to.matched.some(record => record.meta.requiresAuth)) {
+        router.app.dialog.message = `navigate to ${to.meta.message}`;
+        router.app.dialog.show = true;
+        next(false);
+      } else {
+        router.app.loading = true;
+        next();
+      }
     });
 
     router.afterEach(() => {
