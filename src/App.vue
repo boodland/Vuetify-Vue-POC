@@ -4,6 +4,7 @@
     <v-content>
       <app-loader v-show="$root.loading"></app-loader>
       <v-container class="app-layout px-0 py-0">
+        <app-dialog :message="$root.dialog.message"></app-dialog>
         <router-view></router-view>
       </v-container>
     </v-content>
@@ -13,12 +14,14 @@
 <script>
   import AppNavbar from './components/navigation/AppNavbar';
   import AppLoader from './AppLoader';
+  import AppDialog from './AppDialog';
 
   export default {
     name: 'app',
     components: {
       AppNavbar,
       AppLoader,
+      AppDialog,
     },
   };
 </script>
