@@ -6,7 +6,7 @@ import AppUIFramework from './AppUIFramework';
 import AppDirectives from './AppDirectives';
 
 import App from './App';
-import AppRouter from './router';
+import AppRouter from './AppRouter';
 
 Vue.config.productionTip = false;
 
