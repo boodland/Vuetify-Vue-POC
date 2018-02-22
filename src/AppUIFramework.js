@@ -16,6 +16,7 @@ import {
   VSelect,
   VExpansionPanel,
   VProgressLinear,
+  VDialog,
 } from 'vuetify';
 
 require('vuetify/src/stylus/app.styl');
@@ -38,6 +39,7 @@ class AppUIFramework {
         VSelect,
         VExpansionPanel,
         VProgressLinear,
+        VDialog,
       },
     });
   }
