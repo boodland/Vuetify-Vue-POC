@@ -18,8 +18,16 @@
       </v-layout>
     </v-card-media>
     <v-card-actions class="card-actions px-0">
-      <v-chip color="primary" text-color="white">{{numOfExams}} Exams</v-chip>
-      <v-chip color="pink accent-2" text-color="white">{{numOfTutors}} Tutors</v-chip>
+      <router-link class="mx-0" :to="`/subjects/${subjectId}/exams`" tag='div'>
+        <v-chip color="primary" text-color="white">
+          {{numOfExams}} Exams
+        </v-chip>
+      </router-link>
+      <router-link class="mx-0" :to="`/subjects/${subjectId}/tutors`" tag='div'>
+        <v-chip color="pink accent-2" text-color="white">
+          {{numOfTutors}} Tutors
+        </v-chip>
+      </router-link>
     </v-card-actions>
   </v-card>
 </template>
@@ -48,6 +56,7 @@
   .card-actions {
     font-weight: bold;
     justify-content: space-around;
+    text-decoration: none;
   }
 
   .subject-card {
