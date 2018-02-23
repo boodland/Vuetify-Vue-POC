@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar app dark color="primary">
+  <v-toolbar app dark color="primary" height="58px">
     <v-layout class="app-layout" justify-space-between="true" align-center="true">
       <v-toolbar-side-icon
         v-if="isHomePage()"

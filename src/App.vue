@@ -39,13 +39,18 @@
     max-width: 900px;
   }
 
+  .slide-left-enter-active, .slide-right-enter-active {
+    position: fixed;
+    width: 100%;
+    top: 58px;
+  }
+
   .slide-left-enter, .slide-right-leave-active {
-    opacity: 0;
     -webkit-transform: translate(100%, 0);
     transform: translate(100%, 0);
   }
+
   .slide-left-leave-active, .slide-right-enter {
-    opacity: 0;
     -webkit-transform: translate(-100%, 0);
     transform: translate(-100%, 0);
   }
