@@ -29,10 +29,6 @@
 </script>
 
 <style>
-  .app-layout {
-    max-width: 900px;
-  }
-
   .app-grey-text {
     color: rgba(0,0,0,.54);
   }
@@ -40,6 +36,7 @@
   .main-view {
     position: absolute;
     transition: all .5s cubic-bezier(.55,0,.1,1);
+    max-width: 900px;
   }
 
   .slide-left-enter, .slide-right-leave-active {
@@ -56,6 +53,7 @@
   @media (min-width: 900px){
     .app-layout {
       margin: 0 auto;
+      max-width: 900px;
     }
   }
 </style>
