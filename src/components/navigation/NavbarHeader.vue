@@ -32,7 +32,7 @@
         this.$emit('menuIconClicked');
       },
       goBack() {
-        this.$router.back();
+        this.$router.push({ name: this.$router.app.backRoute });
       },
       isHomePage() {
         return this.$route.name === 'DashboardList';

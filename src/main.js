@@ -25,5 +25,6 @@ new Vue({
     loading: false,
     dialog: { show: false, message: '' },
     transitionName: '',
+    backRoute: 'DashboardList',
   },
 });

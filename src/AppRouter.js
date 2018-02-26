@@ -46,6 +46,14 @@ const setTransitionName = (to, from) => {
   }
 };
 
+const setBackRoute = (to, from) => {
+  if (to.name === 'SubjectDetails' && from.name === 'SubjectList') {
+    router.app.backRoute = 'SubjectList';
+  } else {
+    router.app.backRoute = 'DashboardList';
+  }
+};
+
 const setGuards = () => {
   router.beforeEach((to, from, next) => {
     processRequiresAuth(to, from, next);
@@ -54,6 +62,7 @@ const setGuards = () => {
   router.afterEach((to, from) => {
     router.app.loading = false;
     setTransitionName(to, from);
+    setBackRoute(to, from);
   });
 };
 
