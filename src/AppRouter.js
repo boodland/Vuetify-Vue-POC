@@ -23,29 +23,37 @@ const router = new Router({
   ],
 });
 
+const processRequiresAuth = (to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    router.app.dialog.message = `navigate to ${to.meta.message}`;
+    router.app.dialog.show = true;
+    next(false);
+  } else {
+    router.app.loading = true;
+    next();
+  }
+};
+
+const setTransitionName = (to, from) => {
+  if (to.name === 'DashboardList') {
+    router.app.transitionName = 'slide-left';
+  } else if (from.name === 'DashboardList') {
+    router.app.transitionName = 'slide-right';
+  } else {
+    const toDepth = to.path.split('/').length;
+    const fromDepth = from.path.split('/').length;
+    router.app.transitionName = toDepth > fromDepth ? 'slide-right' : 'slide-left';
+  }
+};
+
 const setGuards = () => {
   router.beforeEach((to, from, next) => {
-    if (to.matched.some(record => record.meta.requiresAuth)) {
-      router.app.dialog.message = `navigate to ${to.meta.message}`;
-      router.app.dialog.show = true;
-      next(false);
-    } else {
-      router.app.loading = true;
-      next();
-    }
+    processRequiresAuth(to, from, next);
   });
 
   router.afterEach((to, from) => {
     router.app.loading = false;
-    if (to.name === 'DashboardList') {
-      router.app.transitionName = 'slide-left';
-    } else if (from.name === 'DashboardList') {
-      router.app.transitionName = 'slide-right';
-    } else {
-      const toDepth = to.path.split('/').length;
-      const fromDepth = from.path.split('/').length;
-      router.app.transitionName = toDepth > fromDepth ? 'slide-right' : 'slide-left';
-    }
+    setTransitionName(to, from);
   });
 };
 
